@@ -30,6 +30,7 @@ library
     , ghcjs-dom           >= 0.2
     , http-api-data       >= 0.2
     , http-media          >= 0.6
+    , jsaddle
     , mtl                 >= 2.2.1
     , network-uri         >= 2.6
     , reflex              >= 0.5
@@ -45,7 +46,7 @@ library
   default-language: Haskell2010
 
 executable example
-  build-depends: reflex, servant-reflex, base, scientific, servant, reflex-dom, text
+  build-depends: reflex, servant-reflex, base, scientific, servant, reflex-dom, text, jsaddle-warp
   default-language: Haskell2010
   main-is: Example.hs
   other-modules: API

@@ -19,6 +19,7 @@ import           Data.Text                  (Text)
 import qualified Data.Text                  as T
 import qualified Data.Text.Encoding         as TE
 import           Reflex.Dom
+import           Reflex.Dom.Xhr
 import           Servant.Common.BaseUrl     (BaseUrl, showBaseUrl, SupportsServantReflex)
 import           Servant.API.ContentTypes   (MimeUnrender(..), NoContent(..))
 import           Web.HttpApiData            (ToHttpApiData(..))
@@ -209,6 +210,7 @@ performRequest reqMeth req reqHost trigger = do
   resps <- performRequestAsync okReqs
 
   return (resps, badReqs)
+  -- return undefined
 
 #ifdef ghcjs_HOST_OS
 type XhrPayload = String

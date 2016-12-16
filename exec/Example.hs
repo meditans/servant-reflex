@@ -18,13 +18,14 @@ import API
 import Data.Proxy
 import Text.Read (readMaybe)
 import Reflex.Dom
+import Reflex.Dom.Xhr
+import qualified Language.Javascript.JSaddle.Warp as JSWarp (run)
 
 api :: Proxy API
 api = Proxy
 
 main :: IO ()
-main = mainWidget run
-
+main = JSWarp.run 8081 $ mainWidget run
 
 run :: forall t m. (SupportsServantReflex t m,
                     DomBuilder t m,

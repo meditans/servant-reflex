@@ -56,11 +56,13 @@ import           Servant.Common.Req      (Req, ReqResult(..), QParam(..),
                                           reqMethod, respHeaders, response,
                                           qParams)
 import           Reflex.Dom              (Dynamic, Event, Reflex,
-                                          XhrRequest(..),
-                                          XhrResponseHeaders(..),
-                                          XhrResponse(..), ffor, fmapMaybe,
-                                          leftmost, performRequestAsync,
+                                          ffor, fmapMaybe,
+                                          leftmost,
                                           tagPromptlyDyn )
+import           Reflex.Dom.Xhr           (XhrRequest(..),
+                                          XhrResponseHeaders(..),
+                                          XhrResponse(..),
+                                          performRequestAsync)
 
 -- * Accessing APIs as a Client
 
